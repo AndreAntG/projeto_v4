@@ -3,7 +3,7 @@
     <img src="https://marxjmoura.github.io/admin4b/docs/assets/brand/admin4b.png" alt="admin4b" width="72" height="72">
   </a>
   <h3 align="center">
-    Admin 4B
+    Bank Security
   </h3>
   <p align="center">
     Admin template built on top of <a href="http://getbootstrap.com">Bootstrap 4</a>
@@ -14,27 +14,17 @@
 
 ## Quick start
 
-Some options are available:
+Goals with this project :
 
-- Install with [npm](https://www.npmjs.com/): `npm install admin4b`
-- Download the latest release from [GitHub repo](https://github.com/marxjmoura/admin4b/releases/)
-- Clone the repo: `git clone git@github.com:marxjmoura/admin4b.git`
+- Implement a face recognition login system
+- Create a small version of a homebanking
+- Finish my curse!
 
-## Documentation
-
-The documentation is hosted on [GitHub pages](https://marxjmoura.github.io/admin4b/).
-
-### Running documentation locally
-
-1. Install [Node.js](https://nodejs.org/)
-2. Run `npm install` to install node dependencies
-3. Run `npm run build` to rebuild CSS, JavaScript and HTML files
-4. Open the `index.html`
 
 ## Bugs and features
 
-Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4b/issues) on GitHub.
+Please, fell free to [open a new issue](https://github.com/andreg08/projeto_v4/issues) on GitHub.
 
 ## License
 
-Code released under the [MIT License](https://github.com/marxjmoura/admin4b/blob/master/LICENSE).
+Code released under the [MIT License].
