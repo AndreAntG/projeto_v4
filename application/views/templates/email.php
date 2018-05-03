@@ -244,7 +244,7 @@
           <table cellspacing="0" cellpadding="0" width="100%">
             <tr>
               <td class="hide-for-mobile" style="padding:30px 0 10px 0;">
-                <img width="40" height="31" src="https://imgur.com/FGXCpnS" alt="logo" />
+                <img width="40" height="31" src="<?php echo base_url(); ?>assets/img/BankLogo" alt="logo" />
               </td>
             </tr>
 
@@ -260,7 +260,7 @@
 
             <tr>
               <td class="hide-for-mobile" style="height:180px; width:299px;">
-                <img width="180" height="299"src="https://imgur.com/FGXCpnS" alt="large logo" />
+                <img width="180" height="299"src="<?php echo base_url(); ?>assets/img/BankLogo" alt="large logo" />
               </td>
             </tr>
           </table>
@@ -307,7 +307,7 @@
                                     <center style="color:#ffffff;font-family:sans-serif;font-size:16px;">Activate Now!</center>
                                   </v:roundrect>
                                 <![endif]-->
-                                <!--[if !mso]><!-- --><a href=""' . base_url() .'user/update""><table cellspacing="0" cellpadding="0" width="100%" style="width:100%"><tr><td style="background-color:#48be19;border-radius:5px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:45px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;"><span style="color:#ffffff">Activate Now!</span></td></tr></table></a>
+                                <!--[if !mso]><!-- --><a href="' . base_url() .'user/update"><table cellspacing="0" cellpadding="0" width="100%" style="width:100%"><tr><td style="background-color:#48be19;border-radius:5px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;line-height:45px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;"><span style="color:#ffffff">Activate Now!</span></td></tr></table></a>
                                 <!--<![endif]-->
                               </div>
                           </td>
@@ -320,7 +320,7 @@
                       <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
                           <td style="text-align:center;padding-top:30px;">
-                            <img src="https://www.filepicker.io/api/file/F7k2y1vcTu2AVmcPTkPJ" alt="signature" />
+                            <img src="<?php echo base_url(); ?>assets/img/BankLogo" alt="signature" />
                           </td>
                         </tr>
                       </table>
