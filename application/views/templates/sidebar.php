@@ -21,7 +21,7 @@
 					</div>
                 	<div id="sidebar" class="sidebar-nav">
                     	<div class="sidebar-nav-btn"><a href="" class="btn btn-block btn-outline-light">HOME SECURITY</a></div>
-                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-note"></i> Client Management</a>
+                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-screen-tablet"></i>Client Management</a>
                         		<div id="input-controls" class="sidebar-nav-group collapse" data-parent="#sidebar">
 									<a href="<?php echo base_url(); ?>clients/new_client" class="sidebar-nav-link">Add a Client</a> 
 									<a href="<?php echo base_url(); ?>clients/ask_client" class="sidebar-nav-link">Edit a Client</a> 

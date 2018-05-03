@@ -3,8 +3,8 @@
 .clear { clear: both;}
 </style>
 
-<?php if ($navbar) {
-    echo $navbar;
+<?php if ($header) {
+    echo $header;
 } ?>
 
 <?php if ($sidebar) {

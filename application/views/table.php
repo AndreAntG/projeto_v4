@@ -56,7 +56,7 @@
           
 </div>
 </div>
-</div>
+
 
 
 <script type="text/javascript">
@@ -96,7 +96,7 @@
          swal({
                 title: "Are you sure?",
                 text: "You will not be able to recover this client from DB!",
-                type: "warning",
+                icon: "warning",
                 showCancelButton: true,
                 confirmButtonClass: "btn-danger",
                 confirmButtonText: "Yes, delete it!",
@@ -131,7 +131,7 @@
 
   
              
-              </div><!-- Bootstrap modal -->
+              <!-- Bootstrap modal -->
   <div class="modal fade" id="modal_form" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -161,3 +161,5 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
   <!-- End Bootstrap modal -->
+
+</div> <!-- Content div -->

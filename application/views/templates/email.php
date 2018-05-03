@@ -244,7 +244,7 @@
           <table cellspacing="0" cellpadding="0" width="100%">
             <tr>
               <td class="hide-for-mobile" style="padding:30px 0 10px 0;">
-                <img width="40" height="31" src="https://imgur.com/fWQ9SQA" alt="logo" />
+                <img width="40" height="31" src="https://imgur.com/FGXCpnS" alt="logo" />
               </td>
             </tr>
 
@@ -260,7 +260,7 @@
 
             <tr>
               <td class="hide-for-mobile" style="height:180px; width:299px;">
-                <img width="180" height="299"src="https://imgur.com/fWQ9SQA" alt="large logo" />
+                <img width="180" height="299"src="https://imgur.com/FGXCpnS" alt="large logo" />
               </td>
             </tr>
           </table>

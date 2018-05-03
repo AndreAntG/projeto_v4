@@ -12,7 +12,7 @@
                 $contador = 0;
                 foreach ($accounts as $account) {
                    
-                   echo '<a href="<?php echo base_url(); ?>clients/edit_client/<?php echo $account->id; ?>" class="list-group-item list-group-item-action" tabindex="-1">'. $account->first_name . ' ' . $account->last_name .' - ID: '	. $account->id .'</a>';
+                   echo '<a href="<?php echo base_url(); ?>clients/edit_client/<?php echo $account->id; ?>" class="list-group-item list-group-item-action" tabindex="">'. $account->first_name . ' ' . $account->last_name .' - ID: '	. $account->id .'</a>';
                     $contador++;      
                 }
             ?>

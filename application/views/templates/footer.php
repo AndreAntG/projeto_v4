@@ -6,14 +6,5 @@
     <script src="./assets/js/admin4b.docs.js"></script>
 </body>
 
-  <script>
-        $(document).ready( function () {
-            $('#clients_table').DataTable();
-        });
-      
-
-
-
-    </script> 
 
 </html>

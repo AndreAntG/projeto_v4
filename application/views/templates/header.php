@@ -12,12 +12,15 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>/node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>/node_modules/PACE/themes/blue/pace-theme-minimal.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+	  	<link href="<?php echo base_url(); ?>assets/css/sweetalert.css" rel="stylesheet" type="text/css" >
 
 		<!-- page plugins css -->
 		<link rel="stylesheet" href="<?php echo base_url(); ?>node_modules/summernote/dist/summernote.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>node_modules/selectize/dist/css/selectize.default.css">
 	    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" >
-	   	<script src="<?php echo base_url(); ?>assets/js/sweetalert.js"></script>
+	  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	  
+
 
 		<!-- core css -->
 		<link href="<?php echo base_url(); ?>assets/css/ei-icon.css" rel="stylesheet">
