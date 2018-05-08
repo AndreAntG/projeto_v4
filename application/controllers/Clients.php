@@ -13,8 +13,8 @@ class clients extends MY_Controller
 
     public function index() {       
         $this->data['accounts'] = $this->clients_model->getAllClients();
-        $this->page = 'table';
-        $this->layout();
+        $this->page = 'transference';
+        $this->layoutClient();
     }
     
     public function client_table() {
@@ -166,7 +166,7 @@ class clients extends MY_Controller
                 'date' => $_POST['client_date'],
                 'country' => $_POST['client_country'],
                 'gender' => $_POST['client_gender'],
-                'city' => $_POST['client_city'],
+                'city' => $_POST['client_city'],    
                 'client_type' => $_POST['client_type'],
                 'zipcode' => $_POST['client_zipcode'],
                 'district' => $_POST['client_district'],

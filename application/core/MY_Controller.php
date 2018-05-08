@@ -17,14 +17,24 @@ class MY_Controller extends CI_Controller
     public function layout()
     {
 
-        $this->template['header'] = $this->load->view('templates/header', $this->data, true);
-        $this->template['footer'] = $this->load->view('templates/footer', $this->data, true);
-        $this->template['sidebar'] = $this->load->view('templates/sidebar', $this->data, true);
+        $this->template['header'] = $this->load->view('templateAdmin/header', $this->data, true);
+        $this->template['footer'] = $this->load->view('templateAdmin/footer', $this->data, true);
+        $this->template['sidebar'] = $this->load->view('templateAdmin/sidebar', $this->data, true);
         $this->template['page'] = $this->load->view($this->page, $this->data, true);
-        $this->load->view('templates/main', $this->template);
+        $this->load->view('templateAdmin/main', $this->template);
 
 
     }
+	
+	public function layoutClient() {
+	
+        $this->template['header'] = $this->load->view('templateClient/header', $this->data, true);
+        $this->template['footer'] = $this->load->view('templateClient/footer', $this->data, true);
+        $this->template['page'] = $this->load->view($this->page, $this->data, true);
+        $this->load->view('templateClient/main', $this->template);
+	
+		
+	}
 }
 
 /* End of file Controllername.php */

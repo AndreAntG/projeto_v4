@@ -175,7 +175,7 @@
                         </div>
                     </div>
                 </form>
-                <button type="button" onclick="save(<?= $account->id ?>)" class="btn btn-success"><i class="mdi mdi-loop"></i>Update</button>
+                <button type="button" onclick="save()" class="btn btn-success"><i class="mdi mdi-loop"></i>Update</button>
                
             </div>
         </div>
@@ -183,10 +183,10 @@
 </div>
 
 <script>
-function save(id) {
+function save() {
        // ajax adding data to database
     $.ajax({
-        url : url = "<?php echo base_url('clients/clients_update') ?>/" + id,
+        url : url = "<?php echo base_url('clients/clients_update') ?>",
         type: "POST",
         data: $('#form').serialize(),
         success: function(data) { 

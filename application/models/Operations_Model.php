@@ -1,48 +1,49 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Operations_model extends CI_Model
-{
-    public function __construct() {
+{   
+	var $table_operations = 'operations';
+	var $table_accounts = 'accounts';
+    
+	public function __construct() {
         parent::__construct();
         $this->load->database();
     }
     
-    public function transfers($id1 , $id2, $value) {
+    public function transfers($data) {
     
-        $this->db->select('balance');
-        $this->db->from('operations as o');
-        $this->db->join('accounts as a', ' o.accounts_id = a.id');
-        $this->db->where('a.id', $id2);
-        $balance2 = $this->db->get();
-        
-        
-        $this->db->select('balance');
-        $this->db->from('operations as o');
-        $this->db->join('accounts as a', ' o.accounts_id = a.id');
-        $this->db->where('a.id', $id1);
-        $balance1 = $this->db->get(); 
-        
-        if ($balance >= $value) {
-            $balance2 += $value;
-            $balance1 -= value;
-        }
-        
-        
+    	$this->db->insert($this->table_operations, $data);
+    	return $this->db->insert_id();
         
         
     }
+	
+	public function getBalanceATM($id){
+		$this->db->select("balance");
+        $this->db->from("accounts");
+        $this->db->where('id' , $id);
+    
+		return $this->db->get()->row()->balance;
+				 
+	}
+	
+	public function transfersUpdate($data, $id) {
+		$this->db->insert($this->table_accounts, $data);
+		$this->db->where('id', $id);
+    	return $this->db->insert_id();
+		
+	}
+	
     public function getAllOperations($id) {
         
         $this->db->select('*');
-        $this->db->from('operations as o');
-        $this->db->join('accounts as a', ' o.accounts_id = a.id');
-        $this->db->where('a.id', $id);
+        $this->db->from('operations');
+        $this->db->where('id', $id);
         $query = $this->db->get();
        
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
-
             return $query->result();
         }
     }

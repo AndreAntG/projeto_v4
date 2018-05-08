@@ -7,6 +7,8 @@ class Users_model extends CI_Model
         $query = $this->db->get("users");
         return $query->result();
     }
+	
+	
 
     public function getClientsByID($Client_ID = null) {
         
@@ -19,6 +21,13 @@ class Users_model extends CI_Model
         return $query->row();
         endif;
     }
+	
+	public function get_user_by_previleges() { 
+		$this->db->select('previleges');
+		$this->db->from('users');
+		
+	
+	}
 
     public function get_user_by_email($email) {
         $this->db->select('*');

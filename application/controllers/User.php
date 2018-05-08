@@ -22,23 +22,31 @@ class User extends CI_Controller
             $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
 
             if ($this->form_validation->run() == true) {
+			
                 $email = $_POST['user_email'];
                 $hash = md5($_POST['user_password']);   
         
         //Confima se existe um utilizador na database
                 $this->db->select("*");
                 $this->db->from("users");
-                $this->db->where(array('email' => $email, 'hash' => $hash));
+                $this->db->where(array('email' => $email, 'hash' => $hash , 'privileges'));
                 $query = $this->db->get();
 
                 /* $user = $query->(); */
 
                 if (Count($query->result()) == 1) {
-
+					if('previleges' == 1) {
+					
                     $_SESSION['user_logged'] = true;
                     $_SESSION['email'] = $user->email;
-                    redirect("clients/index", "refresh");
-
+                    redirect("clients/index", "refresh");	
+						
+					} else {
+						 $_SESSION['user_logged'] = true;
+                    $_SESSION['email'] = $user->email;
+                    redirect("clients/index", "refresh");	
+						
+					}
                 } else {
                     $this->session->set_flashdata("error", "<div class='alert alert-danger'> Account dont exist!! </div>");
 

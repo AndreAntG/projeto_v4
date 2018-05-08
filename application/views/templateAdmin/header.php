@@ -13,12 +13,10 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>/node_modules/PACE/themes/blue/pace-theme-minimal.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
 	  	<link href="<?php echo base_url(); ?>assets/css/sweetalert.css" rel="stylesheet" type="text/css" >
+	    <script src="<?php echo base_url(); ?>assets/js/sweetalert.js"></script>
+	  	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-		<!-- page plugins css -->
-		<link rel="stylesheet" href="<?php echo base_url(); ?>node_modules/summernote/dist/summernote.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>node_modules/selectize/dist/css/selectize.default.css">
-	    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" >
-	  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 	  
 
 
