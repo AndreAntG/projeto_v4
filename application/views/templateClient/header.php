@@ -66,7 +66,7 @@
           <div class="span12">
             <div class="headnav">
               <ul>
-                <li><a href="#mySignup" data-toggle="modal"><i class="icon-off"></i> Log out </a></li>
+                <li><a href="<?php echo base_url('user/logout'); ?>" data-toggle="modal"><i class="icon-off"></i> Log out </a></li>
               </ul>
             </div>
             <!-- end signin modal -->

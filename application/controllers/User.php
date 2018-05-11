@@ -29,22 +29,22 @@ class User extends CI_Controller
         //Confima se existe um utilizador na database
                 $this->db->select("*");
                 $this->db->from("users");
-                $this->db->where(array('email' => $email, 'hash' => $hash , 'privileges'));
+                $this->db->where(array('email' => $email, 'hash' => $hash , 'previleges'));
                 $query = $this->db->get();
 
                 /* $user = $query->(); */
 
                 if (Count($query->result()) == 1) {
-					if('previleges' == 1) {
+					if($query->'previleges' == 1) {
 					
                     $_SESSION['user_logged'] = true;
-                    $_SESSION['email'] = $user->email;
+                    $_SESSION['email'] = $email;
                     redirect("clients/index", "refresh");	
 						
 					} else {
 						 $_SESSION['user_logged'] = true;
-                    $_SESSION['email'] = $user->email;
-                    redirect("clients/index", "refresh");	
+                    $_SESSION['email'] = $email;
+                    redirect("account/index", "refresh");	
 						
 					}
                 } else {
