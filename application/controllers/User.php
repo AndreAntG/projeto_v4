@@ -29,13 +29,15 @@ class User extends CI_Controller
         //Confima se existe um utilizador na database
                 $this->db->select("*");
                 $this->db->from("users");
-                $this->db->where(array('email' => $email, 'hash' => $hash , 'previleges'));
+                $this->db->where(array('email' => $email, 'hash' => $hash));
                 $query = $this->db->get();
 
-                /* $user = $query->(); */
-
+                /* $user = $query->(); 
+                */
+                
                 if (Count($query->result()) == 1) {
-					if($query->'previleges' == 1) {
+					foreach ($query->result() as $row ) {
+                    if($row->previleges == 1) {
 					
                     $_SESSION['user_logged'] = true;
                     $_SESSION['email'] = $email;
@@ -46,7 +48,7 @@ class User extends CI_Controller
                     $_SESSION['email'] = $email;
                     redirect("account/index", "refresh");	
 						
-					}
+					} }
                 } else {
                     $this->session->set_flashdata("error", "<div class='alert alert-danger'> Account dont exist!! </div>");
 

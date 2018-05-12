@@ -46,7 +46,7 @@
                         	<div id="reference" class="collapse" data-parent="#sidebar"><a href="./pages/reference/callout.html" class="sidebar-nav-link">Callout</a> <a href="./pages/reference/code-highlight.html" class="sidebar-nav-link">Code highlight</a></div>
                     	</div>
                 	</div>
-                	<div class="sidebar-footer"><a href="./pages/content/chat.html" data-toggle="tooltip" title="Support"><i class="fa fa-comment"></i> </a><a href="./pages/content/settings.html" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i> </a><a href="./pages/content/signin.html" data-toggle="tooltip" title="Logout"><i class="fa fa-power-off"></i></a></div>
+                	<div class="sidebar-footer"><a href="./pages/content/chat.html" data-toggle="tooltip" title="Support"><i class="fa fa-comment"></i> </a><a href="./pages/content/settings.html" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i> </a><a href="<?php echo base_url('user/logout'); ?>" data-toggle="tooltip" title="Logout"><i class="fa fa-power-off"></i></a></div>
             	</div>
             	<div class="app-content">
                 	<nav class="navbar navbar-expand navbar-light bg-white"><button type="button" class="btn btn-sidebar" data-toggle="sidebar"><i class="fa fa-bars"></i></button>
@@ -59,7 +59,8 @@
 										<div class="dropdown-divider"></div><a href="./pages/content/notification.html" class="dropdown-item"><small class="text-secondary">Lorem ipsum (12/25/2017)</small><br><div>Lorem ipsum dolor sit amet...</div></a>
 									<div class="dropdown-divider">
 									</div><a href="./pages/content/notifications.html" class="dropdown-item text-primary">See all notifications</a>
-							</li>
+                                    </div>
+                                </li>
 						</ul>
                 	</nav>
 				<nav aria-label="breadcrumb">

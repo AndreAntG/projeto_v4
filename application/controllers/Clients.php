@@ -14,7 +14,7 @@ class clients extends MY_Controller
     public function index() {       
         $this->data['accounts'] = $this->clients_model->getAllClients();
         $this->page = 'table';
-        $this->layoutClient();
+        $this->layout();
     }
     
     public function client_table() {
