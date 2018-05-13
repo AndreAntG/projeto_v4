@@ -1,7 +1,7 @@
 
 <body>
 	<div id='loader'>
-      <div class="spinner"></div>
+      <div class="loader"></div>
     </div>
 
     <script>

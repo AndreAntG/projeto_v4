@@ -38,7 +38,7 @@ class clients extends MY_Controller
     }
 
     public function new_client() {
-        $this->page = 'new_view';
+        $this->page = 'teste';
         $this->layout();
     }
 
