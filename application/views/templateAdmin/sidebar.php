@@ -1,8 +1,7 @@
 
 <body>
 	<div id='loader'>
-      <div class="loader"></div>
-    </div>
+<div class="spinner-bar"></div>    </div>
 
     <script>
       window.addEventListener('load', () => {

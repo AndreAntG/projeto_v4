@@ -4,10 +4,12 @@
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
 		<title>Bank Security - Admin Dashboard</title>
-	       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <!-- Favicon -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>        <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/logo/favicon.png">
-
+	  
         <!-- plugins css -->
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/pace-theme-minimal.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/perfect-scrollbar.css">
@@ -71,17 +73,7 @@
 
 
 
-      .spinner {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: calc(50% - 20px);
-        left: calc(50% - 20px);
-        background-color: #333;
-        border-radius: 100%;
-        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-        animation: sk-scaleout 1.0s infinite ease-in-out;
-      }
+      
 
       @-webkit-keyframes sk-scaleout {
         0% { -webkit-transform: scale(0) }

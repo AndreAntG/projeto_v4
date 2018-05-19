@@ -38,7 +38,7 @@ class clients extends MY_Controller
     }
 
     public function new_client() {
-        $this->page = 'teste';
+        $this->page = 'new_view';
         $this->layout();
     }
 
@@ -81,7 +81,7 @@ class clients extends MY_Controller
                     'smtp_pass' => 'bank12345',
                 );
                 
-                $mesg = $this->load->view('templates/email','',true);
+                $mesg = $this->load->view('templateAdmin/email','',true);
 
                 $this->load->library('email' , $config);  
                 $this->email->set_mailtype("html");
