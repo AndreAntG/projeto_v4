@@ -17,19 +17,20 @@ class Operations_model extends CI_Model
         
         
     }
-	
+    
 	public function getBalanceATM($id){
 		$this->db->select("balance");
         $this->db->from("accounts");
-        $this->db->where('id' , $id);
+        $this->db->where('user_id' , $id);
     
 		return $this->db->get()->row()->balance;
 				 
 	}
 	
 	public function transfersUpdate($data, $id) {
-		$this->db->insert($this->table_accounts, $data);
-		$this->db->where('id', $id);
+		$this->db->where('user_id', $id);
+        $this->db->update($this->table_accounts, $data);
+		
     	return $this->db->insert_id();
 		
 	}

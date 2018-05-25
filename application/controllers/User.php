@@ -41,6 +41,7 @@ class User extends CI_Controller
 					
                     $_SESSION['user_logged'] = true;
                     $_SESSION['email'] = $email;
+                    $_SESSION['userID'] = $row->id;
                     redirect("clients/index", "refresh");	
 						
 					} else {

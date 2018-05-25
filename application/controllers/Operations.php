@@ -17,7 +17,6 @@ class operations extends MY_Controller
             );
 			
 			$this->form_validation->set_rules('acc_id1', 'Account Origin', 'required');
-            $this->form_validation->set_rules('acc_id2', 'Account Destination', 'required');
             $this->form_validation->set_rules('value', 'Value', 'required');
     	
 			 if ($this->form_validation->run() == FALSE) {
@@ -27,7 +26,7 @@ class operations extends MY_Controller
                 }
            	} else {
 				 
-				$id1 = $_POST['acc_id1'];
+				$id1 = $_SESSION['userID'];
 				$value = $_POST['value'];
 				
 				$balanceATM = $this->Operations_model->getBalanceATM($id1); 
@@ -35,8 +34,8 @@ class operations extends MY_Controller
 				if( $balanceATM >= $value) {
 				
 					 $data = array(
-                    'acc_id1' => $_POST['acc_id1'],
-					'acc_id2' => $_POST['acc_id2'],
+                    'acc_id1' => $id1,
+					'acc_id2' => $_POST['acc_id1'],
 					'value' => $_POST['value'],
 					'desc' => $_POST['desc']
                 );
