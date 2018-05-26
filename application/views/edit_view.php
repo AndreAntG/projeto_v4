@@ -183,10 +183,10 @@
 </div>
 
 <script>
-function save() {
+function save(id) {
        // ajax adding data to database
     $.ajax({
-        url : url = "<?php echo base_url('clients/clients_update') ?>",
+        url : url = "<?php echo base_url('clients/clients_update')?>" + "/" + id,
         type: "POST",
         data: $('#form').serialize(),
         success: function(data) { 

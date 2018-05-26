@@ -20,23 +20,19 @@
 					</div>
                 	<div id="sidebar" class="sidebar-nav">
                     	<div class="sidebar-nav-btn"><a href="" class="btn btn-block btn-outline-light">HOME SECURITY</a></div>
-                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-screen-tablet"></i>Client Management</a>
+                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-people"></i>Client Management</a>
                         		<div id="input-controls" class="sidebar-nav-group collapse" data-parent="#sidebar">
-									<a href="<?php echo base_url(); ?>clients/new_client" class="sidebar-nav-link">Add a Client</a> 
-									<a href="<?php echo base_url(); ?>clients/ask_client" class="sidebar-nav-link">Edit a Client</a> 
-									<a href="<?php echo base_url(); ?>clients/client_table" class="sidebar-nav-link">See all Client's</a> 
+									<a href="<?php echo base_url(); ?>clients/new_client" class="sidebar-nav-link">New </a> 
+									<a href="<?php echo base_url(); ?>clients/client_table" class="sidebar-nav-link">Table</a> 
 								</div>
                     		</div>
-                    		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-screen-tablet"></i>Device 	controls</a>
+                    		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-book-open"></i>Manage Operations</a>
                         		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Camera</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">File manager</a>
 								</div>
                     		</div>
                     	<div class="sidebar-nav-group"><a href="#content" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-doc"></i> Content</a>
                         	<div id="content" class="collapse" data-parent="#sidebar"><a href="./pages/content/blank-page.html" class="sidebar-nav-link">Blank page</a> <a href="./pages/content/details-page.html" class="sidebar-nav-link">Details page</a> <a href="./pages/content/error-page.html" class="sidebar-nav-link">Error page</a> <a href="./pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a> <a href="./pages/content/timeline.html" class="sidebar-nav-link">Timeline</a>
 							</div>
-                    	</div>
-                    	<div class="sidebar-nav-group"><a href="#forms" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-pencil"></i> Forms</a>
-                        	<div id="forms" class="collapse" data-parent="#sidebar"><a href="./pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a> <a href="./pages/forms/multi-step-form.html" class="sidebar-nav-link">Multi step form</a> <a href="./pages/forms/tabbed-form.html" class="sidebar-nav-link">Tabbed form</a></div>
                     	</div>
                     	<div class="sidebar-nav-group"><a href="#layout" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-layers"></i> Layout</a>
                         	<div id="layout" class="collapse" data-parent="#sidebar"><a href="./pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a> <a href="./pages/layout/spinner.html" class="sidebar-nav-link">Spinner</a> <a href="./pages/layout/theming.html" class="sidebar-nav-link">Theming</a></div>

@@ -132,34 +132,41 @@
   
              
               <!-- Bootstrap modal -->
-  <div class="modal fade" id="modal_form" role="dialog">
-  <div class="modal-dialog">
+  <div id="modal_form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="classInfo" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Client Form</h3>
+        <h4 class="modal-title" id="classModalLabel">
+              Last Operations
+            </h4>
+           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          ×
+        </button>
       </div>
-      <div class="modal-body form">
-        <form action="#" id="form" class="form-horizontal">
-          <input type="hidden" value="" name="client_id"/>
-          <table name="operations">
+      <div class="modal-body">
+        <table id="classTable" class="table table-bordered">
           <thead>
           </thead>
-          <tbody class="table">
-              
+          <tbody>
+            <tr>
+              <td>ID</td>
+              <td>Date</td>
+              <td>From</td>
+              <td>To</td>
+              <td>Value €</td>
+            </tr>
           </tbody>
-      </table>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
     </div>
-        </form>
-          </div>
-          <div class="modal-footer">
-          <label class="">For more information go to Edit Client</label>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
 
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
   <!-- End Bootstrap modal -->
 
 </div> <!-- Content div -->
