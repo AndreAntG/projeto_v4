@@ -1,15 +1,14 @@
-      <div class="card">
+      <div class="card" style="background-color='blue'">
             <div class="card-body">
-                <h2 class="card-title">New Client</h2>
                 <div class="jsError"></div>                  
                 <form class="form-sample" id="form">
                     <h4 class="card-description">
-                      Personal info
+                      Informação Pessoal
                     </h4>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Primeiro Nome</label>
+                                <label class="col-sm-3 col-form-label">Nome</label>
                                 <div class="col-sm-9">
                                     <input type="text"  value="" name="client_first_name" class="form-control"  required/>
                                     
@@ -19,7 +18,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Ultimo Nome</label>
+                                <label class="col-sm-3 col-form-label">Apelido</label>
                                 <div class="col-sm-9">
                                     <input type="text"  value="" name="client_last_name" class="form-control" required>
                                 </div>
@@ -40,8 +39,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Date de Nascimento</label>
-                                <div class="col-sm-9">
+                                <label class="col-sm-4 col-form-label">Data Nascimento</label>
+                                <div class="col-sm-7">
                                     <input type="date"  value="" name="client_date" class="form-control">
                                 </div>
                             </div>
@@ -50,16 +49,119 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Phone</label>
+                                <label class="col-sm-3 col-form-label">Telefone</label>
                                 <div class="col-sm-9">
-                                <input type="text"  value="" name="client_phone" class="form-control">
+                                <input type="text"  value="" name="client_phone" maxlength="9" class="form-control">
                                 </div>
+                            </div>
+                        </div>
+                       <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" name="client_email"class="form-control">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="card-description">
+                      Informação de Residência
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Morada</label>
+                                    <div class="col-sm-9">
+                                        <input type="text"  value="" name="client_address" class="form-control">
+                                    </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Membership</label>
-                                    <div class="col-sm-4">
+                                <label class="col-sm-3 col-form-label">Código Postal</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="client_zipcode"class="form-control">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Cidade</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="client_city" class="form-control">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Distrito</label>
+                                    <div class="col-sm-9">
+                                        <input type="text"  name ="client_district"class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">País</label>
+                                    <div class="col-sm-9">
+                                        <select name="client_country" class="form-control">
+                                            <option>Portugal</option>
+                                        </select>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="card-description">
+                    Informação de Conta
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Número de Conta</label>
+                                    <div class="col-sm-9">
+                                    <input name="number" placeholder="Empty" value="" class="form-control" type="text" readonly>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Data de Abertura</label>
+                                <div class="col-sm-9">
+                                    <input type="text"  value="Empty" name="account_date" class="form-control" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Depósito Incial</label>
+                                    <div class="col-sm-9">
+                                    <input name="account_balance" placeholder="Balance" class="form-control" value="€" type="text">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Tipo de Conta</label>
+                                <div class="col-sm-9">
+                                    <select name="account_type" class="form-control">
+                                    <option value="0">Débito</option>
+                                    <option value="1">Crédito</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Tipo de Cliente</label>
+                                    <div class="col-sm-2">
                                         <div class="form-radio">
                                             <label class="form-check-label">
                                                 <input type="radio" class="form-check-input" name="client_type" value="0" id="membershipRadios1" checked="">
@@ -77,110 +179,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <h4 class="card-description">
-                      Address Information
-                    </h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Address</label>
-                                    <div class="col-sm-9">
-                                        <input type="text"  value="" name="client_address" class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">District</label>
-                                    <div class="col-sm-9">
-                                        <input type="text"  name ="client_district"class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Postcode</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="client_zipcode"class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Email</label>
-                                    <div class="col-sm-9">
-                                        <input type="email" name="client_email"class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">City</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="client_city" class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Country</label>
-                                    <div class="col-sm-9">
-                                        <select name="client_country" class="form-control">
-                                            <option>Portugal</option>
-                                        </select>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h4 class="card-description">
-                    Account Information
-                    </h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Account Number</label>
-                                    <div class="col-sm-9">
-                                    <input name="number" placeholder="Empty" value="" class="form-control" type="text" readonly>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Date of Opening</label>
-                                <div class="col-sm-9">
-                                    <input type="text"  value="Empty" name="account_date" class="form-control" readonly>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Inicial Balance</label>
-                                    <div class="col-sm-9">
-                                    <input name="account_balance" placeholder="Balance" class="form-control" value="€" type="text">
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Account Type</label>
-                                <div class="col-sm-9">
-                                    <select name="account_type" class="form-control">
-                                    <option value="0">Débito</option>
-                                    <option value="1">Crédito</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </form>
-                <button type="button" onclick="save()" class="btn btn-success"><i class="mdi mdi-upload"></i>Create</button>
+                <button type="button" onclick="save()" class="btn btn-success"><i class="mdi mdi-upload"></i>Criar</button>
                 <button type="button" onclick="photo()" class="btn btn-success"><i class="mdi mdi-upload"></i>Client Photo</button>
             </div>
     

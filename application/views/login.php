@@ -29,9 +29,6 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="<?php echo base_url(); ?>assets/images/img-01.png" alt="IMG">
                 </div>
-                
-              
-
 				<form class="login100-form validate-form" action="<?php echo base_url("/user/login"); ?>"  name="form_add" method="post">
 					<span class="login100-form-title">
 						Login Area

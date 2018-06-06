@@ -176,7 +176,6 @@
                     </div>
                 </form>
                 <button type="button" onclick="save()" class="btn btn-success"><i class="mdi mdi-loop"></i>Update</button>
-               
             </div>
         </div>
     </div>
@@ -212,7 +211,4 @@ function save(id) {
         }
     });
 }
-
-
-
 </script>

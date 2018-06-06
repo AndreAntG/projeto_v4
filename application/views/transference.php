@@ -115,48 +115,44 @@
 	color: white;
 }
 
-
-
-
 </style>
 
 <section id="inner-headline">
-      <div class="container">
-        <div class="row">
-          <div class="span4">
-            <div class="inner-heading">
-              <h2>Transference</h2>
-            </div>
-          </div>
-          <div class="span8">
-            <ul class="breadcrumb">
-              <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li class="active">Transference</li>
-            </ul>
-          </div>
+    <div class="container">
+    	<div class="row">
+        	<div class="span4">
+            	<div class="inner-heading">
+              		<h2>Transference</h2>
+            	</div>
+          	</div>
+          	<div class="span8">
+            	<ul class="breadcrumb">
+					<li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Transference</li>
+            	</ul>
+          	</div>
         </div>
       </div>
-    </section>
+</section>
 <section id="content">
 <!-- multistep form -->
-<form id="msform">
+	<form id="msform">
 	<!-- progressbar -->
-	<ul id="progressbar">
-		<li class="active">Introdução de Dados</li>
-	</ul>
-	<!-- fieldsets -->
-	<fieldset>
-		<h2 class="fs-title">Introdução de Dados</h2>
-		<h3 class="fs-subtitle">Conta Origem / Conta Destino / Dados </h3>
-		<input type="text" name="acc_id1" placeholder="AccountID *" />
-		<input type="text" name="value" placeholder="Valor *" />
-		<input type="text" name="desc" placeholder="Pequena Descrição" />
-		<h6 class="fs-subtitle">* Obrigatório </h6>
-		<input type="button" onclick="save()" name="next" class="submit action-button" value="Done" />
-	</fieldset>
-</form>
+		<ul id="progressbar">
+			<li class="active">Introdução de Dados</li>
+		</ul>
+		<!-- fieldsets -->
+		<fieldset>
+			<h2 class="fs-title">Introdução de Dados</h2>
+			<h3 class="fs-subtitle">Conta Origem / Conta Destino / Dados </h3>
+			<input type="text" name="acc_id1" placeholder="AccountID *" />
+			<input type="text" name="value" placeholder="Valor *" />
+			<input type="text" name="desc" placeholder="Pequena Descrição" />
+			<h6 class="fs-subtitle">* Obrigatório </h6>
+			<input type="button" onclick="save()" name="next" class="submit action-button" value="Done" />
+		</fieldset>
+	</form>
 </section>	
-
 
 <!-- jQuery -->
 <script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -194,9 +190,4 @@ function save() {
         }
     });
 }
-
-
-
 </script>
-
-

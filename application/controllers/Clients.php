@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 class clients extends MY_Controller
@@ -9,7 +10,6 @@ class clients extends MY_Controller
         $this->load->model('clients_model');
         $this->load->model('Operations_model');
     }
-
 
     public function index() {       
         $this->data['accounts'] = $this->clients_model->getAllClients();
@@ -38,7 +38,7 @@ class clients extends MY_Controller
     }
 
     public function new_client() {
-        $this->page = 'new_view';
+        $this->page = 'teste';
         $this->layout();
     }
 
@@ -73,28 +73,27 @@ class clients extends MY_Controller
             } else {
 
                 $config = array(
-                    'protocol' => 'sendmail',
+                    'protocol' => 'ssmtp',
                     'mailtype' => 'html',
-                    'smtp_host' => 'ssl://smtp.gmail.com',
-                    'smtp_port' => '587',
+                    'smtp_host' => 'ssl://ssmtp.gmail.com',
+                    'smtp_port' => '465',
+                    'charset'   => 'utf-8',
                     'smtp_user' => 'bank.info.org@gmail.com',
                     'smtp_pass' => 'bank12345',
                 );
                 
                 $mesg = $this->load->view('templateAdmin/email','',true);
 
-                $this->load->library('email' , $config);  
+                $this->load->library('email'); 
+                $this->email->initialize($config); 
                 $this->email->set_mailtype("html");
                 $this->email->from('bank.info.org@gmail.com', 'Bank Security');
                 $this->email->to($_POST['client_email']);
                 $this->email->subject('Open a Account');
                 $this->email->message($mesg);
-                
-                if ($this->email->send()) {
-                } else {
-                    $jsonOutput["message"] = print_debugger();   
-                }
 
+                if ($this->email->send()) {
+                  
                 $data2 = array(
                     'email' => $_POST['client_email'],
                 );
@@ -117,7 +116,12 @@ class clients extends MY_Controller
                     'type'          => $_POST['account_type'],
                     'users_id'       => $inserted_id                
                 );
-                $this->clients_model->account_add($data);                           
+                $this->clients_model->account_add($data);    
+                     console.log('Sucesso');
+                    
+                } else {
+                    $jsonOutput["status"] = "error";
+                }
             }
             echo json_encode($jsonOutput);        
         }

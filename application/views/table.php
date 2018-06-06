@@ -1,8 +1,8 @@
     
-    <div class="main-panel" style="margin-top: 50px">
-<p> </p>
-<div class="col-12">
-<table class="table table-bordered table-striped" id='clients_table'>
+<div class="main-panel" style="margin-top: 50px">
+    <p></p>
+    <div class="col-12">
+        <table class="table table-bordered table-striped" id='clients_table'>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -48,18 +48,14 @@
                     $contador++;
                 }
                 ?>
-                </tbody>
-            </table>
+            </tbody>
+        </table>
 
-       <center>  <a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-light btn-rounded btn-fw"><i class="mdi mdi-upload"></i>Add New Client</a></center>
-
-          
-</div>
+        <center>  <a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-light btn-rounded btn-fw"><i class="mdi mdi-upload"></i>Add New Client</a></center>
+    </div>
 </div>
 
-
-
-<script type="text/javascript">
+<script>
   
         $(document).ready( function () {
             $('#clients_table').DataTable();
@@ -129,44 +125,32 @@
     }
 </script>
 
-  
-             
               <!-- Bootstrap modal -->
-  <div id="modal_form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="classInfo" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="classModalLabel">
-              Last Operations
-            </h4>
-           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-          ×
-        </button>
-      </div>
-      <div class="modal-body">
-        <table id="classTable" class="table table-bordered">
-          <thead>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ID</td>
-              <td>Date</td>
-              <td>From</td>
-              <td>To</td>
-              <td>Value €</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">
-          Close
-        </button>
-      </div>
+<div id="modal_form" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="classInfo" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="classModalLabel"> Last Operations </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+            </div>
+            <div class="modal-body">1
+                <table id="classTable" class="table table-bordered">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>ID</td>
+                        <td>Date</td>
+                        <td>From</td>
+                        <td>To</td>
+                        <td>Value €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"> Close </button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-  <!-- End Bootstrap modal -->
-
-</div> <!-- Content div -->

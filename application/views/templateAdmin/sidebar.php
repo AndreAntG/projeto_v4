@@ -1,33 +1,23 @@
 
 <body>
-	<div id='loader'>
-<div class="spinner-bar"></div>    </div>
 
-    <script>
-      window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        setTimeout(() => {
-          loader.classList.add('fadeOut');
-        }, 3000);
-      });
-    </script>
     <div class="app">
         <div class="app-body">
          	<div class="app-sidebar sidebar-slide-left">
             	<div class="text-right"><button type="button" class="btn btn-sidebar" data-dismiss="sidebar"><span class="x"></span></button></div>
                 	<div class="sidebar-header"><img src="<?php echo base_url(); ?>assets/img/john-doe.png" class="user-photo">
-                    	<p class="username">André Gonçalves <small>Administrator</small></p>
+                    	<p class="username">André Gonçalves <small>Root</small></p>
 					</div>
                 	<div id="sidebar" class="sidebar-nav">
-                    	<div class="sidebar-nav-btn"><a href="" class="btn btn-block btn-outline-light">HOME SECURITY</a></div>
-                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-people"></i>Client Management</a>
+                    	<div class="sidebar-nav-btn"><a class="btn btn-block btn-outline-light">BANK SECURITY</a></div>
+                    		<div class="sidebar-nav-group"><a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-people"></i>Gestão de Clientes</a>
                         		<div id="input-controls" class="sidebar-nav-group collapse" data-parent="#sidebar">
-									<a href="<?php echo base_url(); ?>clients/new_client" class="sidebar-nav-link">New </a> 
-									<a href="<?php echo base_url(); ?>clients/client_table" class="sidebar-nav-link">Table</a> 
+									<a href="<?php echo base_url(); ?>clients/new_client" class="sidebar-nav-link">Novo Cliente </a> 
+									<a href="<?php echo base_url(); ?>clients/client_table" class="sidebar-nav-link">Tabela Clientes</a> 
 								</div>
                     		</div>
-                    		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-book-open"></i>Manage Operations</a>
-                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Camera</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">File manager</a>
+                    		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-book-open"></i>Gestão de Contas</a>
+                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Realizar Operação</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">File manager</a>
 								</div>
                     		</div>
                     	<div class="sidebar-nav-group"><a href="#content" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-doc"></i> Content</a>
@@ -45,7 +35,7 @@
             	</div>
             	<div class="app-content">
                 	<nav class="navbar navbar-expand navbar-light bg-white"><button type="button" class="btn btn-sidebar" data-toggle="sidebar"><i class="fa fa-bars"></i></button>
-						<div class="navbar-brand">Admin Dashboard &middot; <a href="https://github.com/marxjmoura/admin4b" class="text-dark" data-toggle="tooltip" data-placement="right" title="Fork me on GitHub"><i class="fa fa-github"></i></a>
+						<div class="navbar-brand">Admin Dashboard  <i class="fa fa-credit-card"></i>
 						</div>
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="badge badge-pill badge-primary">3</span> <i class="fa fa-bell-o"></i></a>

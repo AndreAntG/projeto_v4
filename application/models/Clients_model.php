@@ -69,9 +69,9 @@ class Clients_model extends CI_Model
     }
 
 
-    public function account_update($where, $data) {
+    public function account_update($id, $data) {
         
-        $this->db->where('id', $where);
+        $this->db->where('id', $id);
         $this->db->update($this->table_accounts, $data);
         return $this->db->affected_rows();
     }
