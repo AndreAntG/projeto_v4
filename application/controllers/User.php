@@ -11,7 +11,7 @@ class User extends CI_Controller
 
     public function index() {
 
-        $this->load->view('login');
+        $this->load->view('index');
 
     }
 
@@ -37,26 +37,32 @@ class User extends CI_Controller
                 
                 if (Count($query->result()) == 1) {
 					foreach ($query->result() as $row ) {
-                    if($row->previleges == 1) {
-					
-                    $_SESSION['user_logged'] = true;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['userID'] = $row->id;
-                        
-                    $this->session->set_userdata($_SESSION);    
-                    
-                    redirect("clients/index", "refresh");	
-						
-					} else {
-                        $_SESSION['user_logged'] = true;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['userID'] = $row->id;
+                        if($row->previleges == 1) {
+                        $data array(
 
-                        $this->session->set_userdata($_SESSION);    
-    
-                        redirect("account/index", "refresh");	
-						
-					} }
+                            'logged_in'   => true,
+                            'email'         => $email,
+                            'userID'        => $row->id      
+                        );
+                        
+                        $this->session->set_userdata($data);    
+                        
+                        redirect("clients/index", "refresh");	
+                            
+                        } else {
+                            $data array(
+
+                                'logged_in'   => true,
+                                'email'         => $email,
+                                'userID'        => $row->id      
+                            );
+
+                            $this->session->set_userdata($data);    
+        
+                            redirect("account/index", "refresh");	
+                            
+                        } 
+                    }
                 } else {
                     $this->session->set_flashdata("error", "<div class='alert alert-danger'> Account dont exist!! </div>");
 

@@ -22,13 +22,7 @@ class clients extends MY_Controller
         $this->page = 'table';
         $this->layout();
     }
-    
-    public function ask_client(){
-        
-        $this->data['accounts'] = $this->clients_model->getAllClients();
-        $this->page = 'ask_view';
-        $this->layout();
-    }
+
 
     public function edit_client($id) { 
         $this->data['operations'] = $this->Operations_model->getAllOperations($id);
@@ -73,21 +67,22 @@ class clients extends MY_Controller
             } else {
 
                 $config = array(
-                    'protocol' => 'ssmtp',
-                    'mailtype' => 'html',
-                    'smtp_host' => 'ssl://ssmtp.gmail.com',
-                    'smtp_port' => '465',
+                    'protocol'  => 'smtp',
+                    'mailtype'  => 'html',
+                    'smtp_host' => 'smtp-mail.outlook.com',
+                    'smtp_port' => '587',
                     'charset'   => 'utf-8',
-                    'smtp_user' => 'bank.info.org@gmail.com',
+                    'validate'  => 'FALSE',
+                    'smtp_user' => 'supp.bs@outlook.pt',
                     'smtp_pass' => 'bank12345',
                 );
                 
                 $mesg = $this->load->view('templateAdmin/email','',true);
 
-                $this->load->library('email'); 
+                $this->email->set_newline("\r\n"); 
                 $this->email->initialize($config); 
                 $this->email->set_mailtype("html");
-                $this->email->from('bank.info.org@gmail.com', 'Bank Security');
+                $this->email->from('supp.bs@outlook.pt', 'Bank Security');
                 $this->email->to($_POST['client_email']);
                 $this->email->subject('Open a Account');
                 $this->email->message($mesg);
@@ -117,10 +112,10 @@ class clients extends MY_Controller
                     'users_id'       => $inserted_id                
                 );
                 $this->clients_model->account_add($data);    
-                     console.log('Sucesso');
                     
                 } else {
-                    $jsonOutput["status"] = "error";
+                    $jsonOutput["status"] = "email not send";
+                    
                 }
             }
             echo json_encode($jsonOutput);        
