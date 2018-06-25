@@ -127,8 +127,8 @@
           	</div>
           	<div class="span8">
             	<ul class="breadcrumb">
-					<li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-					<li class="active">Tranferências</li>
+					<li><a href="<?php echo base_url(); ?>account/index"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Tranferência Nacional</li>
             	</ul>
           	</div>
         </div>
@@ -137,10 +137,6 @@
 <section id="content">
 <!-- multistep form -->
 	<form id="msform">
-	<!-- progressbar -->
-		<ul id="progressbar">
-			<li class="active">Introdução de Dados</li>
-		</ul>
 		<!-- fieldsets -->
 		<fieldset>
 			<h2 class="fs-title">Introdução de Dados</h2>

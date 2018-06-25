@@ -7,6 +7,7 @@ class User extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->model('users_model');
+        $this->load->library('session');
     }
 
     public function index() {
@@ -38,11 +39,11 @@ class User extends CI_Controller
                 if (Count($query->result()) == 1) {
 					foreach ($query->result() as $row ) {
                         if($row->previleges == 1) {
-                        $data array(
+                        $data = array(
 
-                            'logged_in'   => true,
                             'email'         => $email,
-                            'userID'        => $row->id      
+                            'userID'        => $row->id,
+                            'logged_in'     => true       
                         );
                         
                         $this->session->set_userdata($data);    
@@ -50,11 +51,12 @@ class User extends CI_Controller
                         redirect("clients/index", "refresh");	
                             
                         } else {
-                            $data array(
+                            $data = array(
 
-                                'logged_in'   => true,
+                                
                                 'email'         => $email,
-                                'userID'        => $row->id      
+                                'userID'        => $row->id, 
+                                'logged_in'     => true   
                             );
 
                             $this->session->set_userdata($data);    
@@ -78,7 +80,7 @@ class User extends CI_Controller
         
         unset($_SESSION);
         session_destroy();
-        redirect("user/login", "refresh");
+        redirect("user/index", "refresh");
     }
 
     public function update() {

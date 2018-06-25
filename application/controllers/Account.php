@@ -17,5 +17,11 @@ class account extends MY_Controller
         $this->page = 'home';
         $this->layoutClient();
     }
+
+    public function transference() {
+        $this->page = 'transference';
+        $this->layoutClient();
+
+    }
     
 }

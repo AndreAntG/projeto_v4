@@ -17,25 +17,22 @@
 								</div>
                     		</div>
                     		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-book-open"></i>Gestão de Contas</a>
-                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Realizar Operação</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">File manager</a>
+                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Nova Conta</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">Editar Conta</a>
 								</div>
                     		</div>
-                    	<div class="sidebar-nav-group"><a href="#content" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-doc"></i> Content</a>
-                        	<div id="content" class="collapse" data-parent="#sidebar"><a href="./pages/content/blank-page.html" class="sidebar-nav-link">Blank page</a> <a href="./pages/content/details-page.html" class="sidebar-nav-link">Details page</a> <a href="./pages/content/error-page.html" class="sidebar-nav-link">Error page</a> <a href="./pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a> <a href="./pages/content/timeline.html" class="sidebar-nav-link">Timeline</a>
+                    	<div class="sidebar-nav-group"><a href="#content" class="sidebar-nav-link" data-toggle="collapse"><i class="fas fa-recycle"></i> Movimentos</a>
+                        	<div id="content" class="collapse" data-parent="#sidebar"> <a href="#" class="sidebar-nav-link">Efetuar Movimento</a> <a href="#" class="sidebar-nav-link">Consultar Movimentos</a>
 							</div>
                     	</div>
-                    	<div class="sidebar-nav-group"><a href="#layout" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-layers"></i> Layout</a>
+                    	<div class="sidebar-nav-group"><a href="#layout" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-ban"></i> Brevemente</a>
                         	<div id="layout" class="collapse" data-parent="#sidebar"><a href="./pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a> <a href="./pages/layout/spinner.html" class="sidebar-nav-link">Spinner</a> <a href="./pages/layout/theming.html" class="sidebar-nav-link">Theming</a></div>
-                    	</div>
-                    	<div class="sidebar-nav-group"><a href="#reference" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-notebook"></i> Reference</a>
-                        	<div id="reference" class="collapse" data-parent="#sidebar"><a href="./pages/reference/callout.html" class="sidebar-nav-link">Callout</a> <a href="./pages/reference/code-highlight.html" class="sidebar-nav-link">Code highlight</a></div>
                     	</div>
                 	</div>
                 	<div class="sidebar-footer"><a href="./pages/content/chat.html" data-toggle="tooltip" title="Support"><i class="fa fa-comment"></i> </a><a href="./pages/content/settings.html" data-toggle="tooltip" title="Settings"><i class="fa fa-cog"></i> </a><a href="<?php echo base_url('user/logout'); ?>" data-toggle="tooltip" title="Logout"><i class="fa fa-power-off"></i></a></div>
             	</div>
             	<div class="app-content">
                 	<nav class="navbar navbar-expand navbar-light bg-white"><button type="button" class="btn btn-sidebar" data-toggle="sidebar"><i class="fa fa-bars"></i></button>
-						<div class="navbar-brand">Admin Dashboard  <i class="fa fa-credit-card"></i>
+						<div class="navbar-brand">Painel de Administração <i class="fas fa-address-card"></i>
 						</div>
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="badge badge-pill badge-primary">3</span> <i class="fa fa-bell-o"></i></a>
@@ -50,7 +47,6 @@
                 	</nav>
 				<nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item">Home</li>
-          <li class="breadcrumb-item active" aria-current="page">Library</li>
+          <li class="breadcrumb-item"><?= $page_heading ?></li>
         </ol>
       </nav>

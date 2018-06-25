@@ -4,13 +4,13 @@
     	<div class="row">
         	<div class="span4">
             	<div class="inner-heading">
-              		<h2>Home</h2>
+              		<h2>Bem Vindo </h2>
             	</div>
           	</div>
           	<div class="span8">
             	<ul class="breadcrumb">
-					<li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-					<li class="active">Home</li>
+					<li><a href="<?php echo base_url(); ?>account/index"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Inicio</li>
             	</ul>
           	</div>
         </div>

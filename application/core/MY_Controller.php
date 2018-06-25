@@ -8,7 +8,7 @@ class MY_Controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if (!isset($_SESSION['user_logged'])) {
+        if (!isset($_SESSION['logged_in'])) {
             $this->session->set_flashdata('error', "<div class='alert alert-danger'> Please login first to view the page you want to access! </div>");
             redirect("user/login", "refresh");
         }

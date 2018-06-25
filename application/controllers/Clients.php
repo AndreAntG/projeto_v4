@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class clients extends MY_Controller
 
 {
+
     public function __construct() {
         parent::__construct();
 
@@ -11,7 +12,8 @@ class clients extends MY_Controller
         $this->load->model('Operations_model');
     }
 
-    public function index() {       
+    public function index() {
+        $this->data['page_heading'] = 'Tabela Clientes';       
         $this->data['accounts'] = $this->clients_model->getAllClients();
         $this->page = 'table';
         $this->layout();
@@ -27,7 +29,7 @@ class clients extends MY_Controller
     public function edit_client($id) { 
         $this->data['operations'] = $this->Operations_model->getAllOperations($id);
         $this->data['account'] = $this->clients_model->get_client_by_id($id);
-        $this->page = 'edit_view';
+        $this->page = 'edit_view_new';
         $this->layout();
     }
 
@@ -147,8 +149,7 @@ class clients extends MY_Controller
             $this->form_validation->set_rules('client_type', 'Type', 'required');
             $this->form_validation->set_rules('client_zipcode', 'ZipCode', 'required');
             $this->form_validation->set_rules('client_district', 'District', 'required');
-            $this->form_validation->set_rules('account_balance', 'Balance', 'required');
-            $this->form_validation->set_rules('account_type', 'Type', 'required');
+          
 
             if ($this->form_validation->run() == FALSE) {
                 if (validation_errors() != "") {
@@ -169,8 +170,6 @@ class clients extends MY_Controller
                 'client_type' => $_POST['client_type'],
                 'zipcode' => $_POST['client_zipcode'],
                 'district' => $_POST['client_district'],
-                'balance' => $_POST['account_balance'],
-                'type' => $_POST['account_type'], 
             );
 
             $this->clients_model->account_update($id , $data);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V1</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -19,7 +19,9 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/main.css">
-<!--===============================================================================================-->
+	<link href="<?php echo base_url(); ?>assets/css/sweetalert.css" rel="stylesheet" type="text/css" >
+	<script src="<?php echo base_url(); ?>assets/js/sweetalert.js"></script>
+	<!--===============================================================================================-->
 </head>
 <body>
 	
@@ -31,7 +33,7 @@
                 </div>
 				<form class="login100-form validate-form" action="<?php echo base_url("/user/login"); ?>"  name="form_add" method="post">
 					<span class="login100-form-title">
-						Login Area
+						Área de Login
 					</span>
                     <?php echo validation_errors();
                             echo @$this->session->flashdata("error"); ?>
@@ -56,18 +58,8 @@
 							Login
 						</button>
 					</div>
-                    
-					<div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-						<a class="txt2" href="#">
-							Username / Password?
-						</a>
-					</div>
-                    
 					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
+						<a class="txt2" id="link" href="#">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
@@ -77,6 +69,14 @@
 		</div>
 	</div>
 	
+	<script type="text/javascript">
+    $('a#link').click(function(){ 	swal(
+                    'Done!',
+                    'Para criar uma conta diriga-se a um balcão!',
+                    'success'
+                ); })
+</script>
+
 	
 
 	

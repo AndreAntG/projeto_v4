@@ -5,12 +5,12 @@
         <table class="table table-bordered table-striped" id='clients_table'>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone Nº</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>Nª Cliente</th>
+                    <th>Primeiro Nome</th>
+                    <th>Ultimo Nome</th>
+                    <th>Tipo</th>
+                    <th>Estados</th>
+                    <th>Acções</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,11 +26,15 @@
                         echo '<td>' . $account->id . '</td>';
                         echo '<td>' . $account->first_name . '</td>';
                         echo '<td>' . $account->last_name . '</td>';
-                        echo '<td>' . $account->phone . '</td>';
+                        if ($account->type == 0) {
+                            echo '<td> Débito </td>';   
+                        } else {
+                            echo '<td> Crédito </td>'; 
+                        }
                         echo '<td align="left">';
 
                         if ($account->status == 1) {
-                            echo '<label class="badge badge-success">Ativo</label>';
+                            echo '<h5><label class="badge badge-success">Ativo</label></h5>';
                         } else {
                             echo '<label class="badge badge-warning">Inativo</label>';
 
@@ -38,9 +42,9 @@
                         ?>
                     <td class="text-left"> 
                         
-                    <a href="<?php echo base_url(); ?>clients/edit_client/<?php echo $account->id; ?>" class="btn btn-warning"><i class="mdi mdi-message-text"></i>Edit</a>
-                    <button type="button" onclick="delete_client(<?php echo $account->id; ?>)" class="btn btn-info"><i class="mdi mdi-delete"></i>Delete</button>
-                    <button type="button" onclick="consult_operations(<?php echo $account->id; ?>)"   class="btn btn-success"><i class="mdi mdi-cloud-download"></i>Info</button>
+                    <a href="<?php echo base_url(); ?>clients/edit_client/<?php echo $account->id; ?>" class="btn btn-sm btn-success"><i class="mdi mdi-message-text"></i>Editar</a>
+                    <button type="button" onclick="consult_operations(<?php echo $account->id; ?>)"   class="btn btn-sm btn-info"><i class="mdi mdi-cloud-download"></i>Consultar</button>
+                    <button type="button" onclick="delete_client(<?php echo $account->id; ?>)" class="btn btn-sm btn-danger"><i class="mdi mdi-delete"></i>Apagar</button>
                     <?php
                     echo '</td>';
                     echo '</tr>';
@@ -51,7 +55,8 @@
             </tbody>
         </table>
 
-        <center>  <a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-light btn-rounded btn-fw"><i class="mdi mdi-upload"></i>Add New Client</a></center>
+        <center><a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-outline-primary">Adicionar Novo CLiente</a></center>
+
     </div>
 </div>
 
@@ -90,13 +95,13 @@
 
     function delete_client(id) {
          swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this client from DB!",
+                title: "Tem a certeza?",
+                text: "Ao apagar um cliente todos os dados serão perdidos!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonClass: "btn-danger",
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel!",
+                confirmButtonText: "Sim, apagar!",
+                cancelButtonText: "Não, cancelar!",
                 closeOnConfirm: false,
                 closeOnCancel: false,
                 showLoaderOnConfirm: true
@@ -109,7 +114,7 @@
                             type: "POST",
                             dataType: "JSON",
                             success: function(data) {
-                                swal("Deleted!", "Wait 5 seconds to reload ...", "success");
+                                swal("Apagado!", "Espere 5 segundos para recarregar ...", "success");
                                 setInterval(function () {  window.location.reload(); }, 5000);
                                 
                             },  
@@ -118,7 +123,7 @@
                             }
                         });
                     } else {
-                        swal("Cancelled", "Your client is not deleted :)", "error");
+                        swal("Cancelado", "error");
                     }
                 });
                 

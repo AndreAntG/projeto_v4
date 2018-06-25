@@ -26,6 +26,9 @@
 		<script src="<?php echo base_url(); ?>camera/jpeg_camera.min.js" type="text/javascript"></script>
 		<script src="<?php echo base_url(); ?>camera/jpeg_camera_with_dependencies.min.js" type="text/javascript"></script>
 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
 
 		<!-- core css -->
 		<link href="<?php echo base_url(); ?>assets/css/themify-icons.css" rel="stylesheet">
