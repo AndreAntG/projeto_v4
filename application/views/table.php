@@ -20,7 +20,7 @@
                         //Se for igual a 1 esta ATIVO
                             echo '<tr class="table-success">';
                         } else {
-                            echo '<tr>';
+                            echo '<tr class="table-warning">';
                         }
                         echo '<td>' . $profile->id . '</td>';
                         echo '<td>' . $profile->first_name . '</td>';
@@ -31,7 +31,7 @@
                         if ($profile->status == 1) {
                             echo '<h5><label class="badge badge-success">Ativo</label></h5>';
                         } else {
-                            echo '<label class="badge badge-warning">Inativo</label>';
+                            echo '<h6><label class="badge badge-danger">Inativo</label></h6>';
 
                         }
                         ?>
@@ -50,7 +50,7 @@
             </tbody>
         </table>
 
-        <center><a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-outline-primary">Adicionar Novo CLiente</a></center>
+        <center><a href="<?php echo base_url(); ?>clients/new_client" class="btn btn-outline-primary">Adicionar Novo Cliente</a></center>
 
     </div>
 </div>
