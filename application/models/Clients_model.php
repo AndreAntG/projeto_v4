@@ -4,6 +4,7 @@ class Clients_model extends CI_Model
 {
     var $table_accounts = 'accounts';
     var $table_users = 'users';
+    var $table_profile = 'profile';
 
     public function __construct() {
         parent::__construct();
@@ -11,7 +12,7 @@ class Clients_model extends CI_Model
     }
 
     public function getAllClients() {
-        $query = $this->db->get("accounts");
+        $query = $this->db->get("profile");
 
         return $query->result();
     }
@@ -23,16 +24,26 @@ class Clients_model extends CI_Model
         endif;
     }
 
-    public function get_client_by_id($id) {
-        $this->db->select('a.*, u.email');
-        $this->db->from('accounts as a');
-        $this->db->join('users as u', 'u.id = a.users_id');
+    public function get_profile_by_id($id) {
+        $this->db->select('p.*, u.email');
+        $this->db->from('profile as p');
+        $this->db->join('users as u', 'u.id = p.users_id');
 
-        $this->db->where('a.id', $id);
+        $this->db->where('p.id', $id);
         $query = $this->db->get();
 
         return $query->row();
     }
+
+    public function get_accounts_by_id($id) {
+        $this->db->select('*');
+        $this->db->from('accounts');
+        $this->db->where('users_id', $id);
+
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     public function get_email_by_id($id) {
        
         $this->db->select('email');
@@ -57,8 +68,8 @@ class Clients_model extends CI_Model
         }    
     }
 
-    public function account_add($data) {
-        $this->db->insert($this->table_accounts, $data);
+    public function profile_add($data) {
+        $this->db->insert($this->table_profile, $data);
         return $this->db->insert_id();
     }
 
@@ -68,11 +79,16 @@ class Clients_model extends CI_Model
         return $this->db->insert_id();
     }
 
+    public function acc_add($data) {
+        $this->db->insert($this->table_accounts, $data);
+        return $this->db->insert_id();
+    }
 
-    public function account_update($id, $data) {
+
+    public function profile_update($id, $data) {
         
         $this->db->where('id', $id);
-        $this->db->update($this->table_accounts, $data);
+        $this->db->update($this->table_profile, $data);
         return $this->db->affected_rows();
     }
 

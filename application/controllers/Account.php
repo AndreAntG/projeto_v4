@@ -12,8 +12,7 @@ class account extends MY_Controller
 
 
     public function index() {       
-        $this->data['account'] = $this->clients_model->get_client_by_id($this->session->userID);
-        $this->data['teste'] = $this->session->userID;
+        $this->data['account'] = $this->clients_model->get_profile_by_id($this->session->userdata('userID'));
         $this->page = 'home';
         $this->layoutClient();
     }

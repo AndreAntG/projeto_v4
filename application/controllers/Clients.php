@@ -14,26 +14,29 @@ class clients extends MY_Controller
 
     public function index() {
         $this->data['page_heading'] = 'Tabela Clientes';       
-        $this->data['accounts'] = $this->clients_model->getAllClients();
+        $this->data['profiles'] = $this->clients_model->getAllClients();
         $this->page = 'table';
         $this->layout();
     }
     
     public function client_table() {
-        $this->data['accounts'] = $this->clients_model->getAllClients();
+        $this->data['page_heading'] = 'Tabela Clientes';       
+        $this->data['profiles'] = $this->clients_model->getAllClients();
         $this->page = 'table';
         $this->layout();
     }
 
 
-    public function edit_client($id) { 
+    public function edit_client($id) {
+        $this->data['page_heading'] = 'Editar Clientes';  
         $this->data['operations'] = $this->Operations_model->getAllOperations($id);
-        $this->data['account'] = $this->clients_model->get_client_by_id($id);
+        $this->data['profile'] = $this->clients_model->get_profile_by_id($id);
         $this->page = 'edit_view_new';
         $this->layout();
     }
 
     public function new_client() {
+        $this->data['page_heading'] = 'Novo Cliente';  
         $this->page = 'teste';
         $this->layout();
     }
@@ -106,14 +109,19 @@ class clients extends MY_Controller
                     'country'       => $_POST['client_country'],
                     'gender'        => $_POST['client_gender'],
                     'city'          => $_POST['client_city'],
-                    'client_type'   => $_POST['client_type'],
+                    'type'          => $_POST['client_type'],
                     'zipcode'       => $_POST['client_zipcode'],
                     'district'      => $_POST['client_district'],
+                );
+                $this->clients_model->profile_add($data);    
+
+                $data3 = array(
                     'balance'       => $_POST['account_balance'],
                     'type'          => $_POST['account_type'],
                     'users_id'       => $inserted_id                
                 );
-                $this->clients_model->account_add($data);    
+
+                $this->clients_model->account_add($data);
                     
                 } else {
                     $jsonOutput["status"] = "email not send";
@@ -124,8 +132,34 @@ class clients extends MY_Controller
         }
     }
 
+    public function new_acc() {
+        if ($this->input->server("REQUEST_METHOD") == "POST") {
+            $data = array(
+                'balance'       => $_POST['account_balance'],
+                'type'          => $_POST['account_type'],
+                'users_id'      => $_POST['client_id'],              
+            );
+            $jsonOutput["status"] = "ok";
+            $this->clients_model->acc_add($data);
+            echo json_encode($jsonOutput); 
+        
+        } else {
+            $this->data['page_heading'] = 'Nova Conta'; 
+            $this->data['profiles'] = $this->clients_model->getAllClients();
+            $this->page = 'new_acc';
+            $this->layout();
+        }
+    }
+
+    public function acc_view($id){
+        $data = $this->clients_model->get_accounts_by_id($id);
+        
+        echo json_encode($data);
+    }
+
+
     public function ajax_edit($id) {
-        $data = $this->clients_model->get_client_by_id($id);
+        $data = $this->clients_model->get_profile_by_id($id);
         
         echo json_encode($data);
     }
@@ -167,12 +201,12 @@ class clients extends MY_Controller
                 'country' => $_POST['client_country'],
                 'gender' => $_POST['client_gender'],
                 'city' => $_POST['client_city'],    
-                'client_type' => $_POST['client_type'],
+                'type' => $_POST['client_type'],
                 'zipcode' => $_POST['client_zipcode'],
                 'district' => $_POST['client_district'],
             );
 
-            $this->clients_model->account_update($id , $data);
+            $this->clients_model->profile_update($id , $data);
                                   
             echo json_encode($jsonOutput);
         }

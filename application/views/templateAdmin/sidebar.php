@@ -17,7 +17,7 @@
 								</div>
                     		</div>
                     		<div class="sidebar-nav-group"><a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse"><i class="icon-book-open"></i>Gestão de Contas</a>
-                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="./pages/device-controls/camera.html" class="sidebar-nav-link">Nova Conta</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">Editar Conta</a>
+                        		<div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar"><a href="<?php echo base_url(); ?>clients/new_acc" class="sidebar-nav-link">Nova Conta</a> <a href="./pages/device-controls/file-manager.html" class="sidebar-nav-link">Editar Conta</a>
 								</div>
                     		</div>
                     	<div class="sidebar-nav-group"><a href="#content" class="sidebar-nav-link" data-toggle="collapse"><i class="fas fa-recycle"></i> Movimentos</a>

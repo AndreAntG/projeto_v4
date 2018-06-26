@@ -7,41 +7,41 @@
         <legend><span class="number">1</span> Informação Pessoal</legend>
       
         <label>Primeiro Nome</label>
-        <input type="text" placeholder="Nome *" value="<?= $account->first_name ?>" name="client_first_name"  required>
+        <input type="text" placeholder="Nome *" value="<?= $profile->first_name ?>" name="client_first_name"  required>
         
         <label>Ultimo Nome</label>
-        <input type="text" name="client_last_name"  value="<?= $account->last_name ?>" placeholder="Apelido *" required>
+        <input type="text" name="client_last_name"  value="<?= $profile->last_name ?>" placeholder="Apelido *" required>
         
         <label>Data Nascimento</label>
-        <input type="date" name="client_date" value="<?= $account->birthday ?>" placeholder="Data Nascimento *" required>
+        <input type="date" name="client_date" value="<?= $profile->birthday ?>" placeholder="Data Nascimento *" required>
         
         <label>Sexo :</label>
         <select name="client_gender">
-            <option <?=($account->gender == "Masculino")? 'selected': '' ?>>Masculino</option>;
-            <option <?=($account->gender == "Femenino")? 'selected': '' ?>>Femenino</option>
+            <option <?=($profile->gender == "Masculino")? 'selected': '' ?>>Masculino</option>;
+            <option <?=($profile->gender == "Femenino")? 'selected': '' ?>>Femenino</option>
         </select>
 
         <label>Nº Telefone</label>
-        <input type="text" name="client_phone" value="<?= $account->phone ?>" placeholder="Número *"  maxlength="9" required>
+        <input type="text" name="client_phone" value="<?= $profile->phone ?>" placeholder="Número *"  maxlength="9" required>
 
         <label>Email</label>
-        <input type="email" name="client_email" value="<?= $account->email?>" placeholder="Email *" required>
+        <input type="email" name="client_email" value="<?= $profile->email?>" placeholder="Email *" required>
         
     </fieldset>
     <fieldset>
       <legend><span class="number">2</span> Informação de Residência</legend>
       
       <label>Morada</label>
-      <input type="text" name="client_address" value="<?= $account->address ?>" placeholder="Morada *"  required>
+      <input type="text" name="client_address" value="<?= $profile->address ?>" placeholder="Morada *"  required>
 
       <label>Código Postal</label>
-      <input type="text" name="client_zipcode" value="<?= $account->zipcode ?>" placeholder="Código Postal *" required>
+      <input type="text" name="client_zipcode" value="<?= $profile->zipcode ?>" placeholder="Código Postal *" required>
     
       <label>Cidade</label>
-      <input type="text" name="client_city" value="<?= $account->city ?>" placeholder="Cidade *"  required>
+      <input type="text" name="client_city" value="<?= $profile->city ?>" placeholder="Cidade *"  required>
 
       <label>Distrito</label>
-      <input type="text" name="client_district" value="<?= $account->district ?>" placeholder="Distrito *" required>
+      <input type="text" name="client_district" value="<?= $profile->district ?>" placeholder="Distrito *" required>
 
         <label>País :</label>
       <select name="client_country">

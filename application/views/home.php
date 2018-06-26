@@ -20,7 +20,7 @@
 <div class="wrapper">
                   <div class="testimonial">
                     <p class="text">
-                      <i class="icon-quote-left icon-48"></i> Bem Vindo <?= $account->first_name ?>
+                      <i class="icon-quote-left icon-48"></i> Bem Vindo <?php var_dump($id); ?>
                     </p>
                     <div class="author">
                       <img src="<?php echo base_url(); ?>/assetsv2/img/dummies/testimonial-author1.png" class="img-circle bordered" alt="">
